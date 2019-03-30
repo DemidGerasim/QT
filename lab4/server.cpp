@@ -38,7 +38,7 @@ void Server::slotReadClient()
     }*/
     if(!_socket->canReadLine())return;
     char buf[1024];
-    _socket->write(buf, sizeof(buf));
+    _socket->readLine(buf, sizeof(buf));
     _socket->write(buf);
 }
 
