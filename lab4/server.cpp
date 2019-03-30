@@ -26,6 +26,7 @@ void Server::slotNewConnection()
 {
     _socket = _server->nextPendingConnection();
     _socket->write("Hello World");
+    connect(_socket, SIGNAL(readyRead()),this, SLOT(slotReadClient()));
 }
 
 
