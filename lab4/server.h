@@ -26,11 +26,7 @@ public:
 
 public slots:
     void slotNewConnection();
-    void slotReadClient()
-    {
-
-    }
-
+    void slotReadClient();
 };
 
 #endif // SERVER_H

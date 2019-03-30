@@ -25,8 +25,17 @@ setLayout(layout);
 void Server::slotNewConnection()
 {
     _socket = _server->nextPendingConnection();
-    _socket->write("Hello World");
+    _socket->write("Hello World\n\r");
     connect(_socket, SIGNAL(readyRead()),this, SLOT(slotReadClient()));
+}
+
+void Server::slotReadClient()
+{
+    while(_socket->bytesAvailable() > 0)
+    {
+        QByteArray array = _socket->readAll();
+        _socket->write(array);
+    }
 }
 
 
