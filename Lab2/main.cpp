@@ -45,7 +45,6 @@ cout << x->_a << endl;
 cout << y._a << endl;
 */
 
-//Class x(10);
 Class x = Class(10);
 cout<< x._a << endl;
 
