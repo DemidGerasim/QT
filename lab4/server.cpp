@@ -31,11 +31,15 @@ void Server::slotNewConnection()
 
 void Server::slotReadClient()
 {
-    while(_socket->bytesAvailable() > 0)
+   /*while(_socket->bytesAvailable() > 0)
     {
         QByteArray array = _socket->readAll();
         _socket->write(array);
-    }
+    }*/
+    if(!_socket->canReadLine())return;
+    char buf[1024];
+    _socket->write(buf, sizeof(buf));
+    _socket->write(buf);
 }
 
 
