@@ -1,15 +1,14 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2019-03-30T13:00:44
+# Project created by QtCreator 2019-04-06T10:06:21
 #
 #-------------------------------------------------
 
 QT       += core gui
 QT       += network
-
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = lab4
+TARGET = lab6
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -27,15 +26,13 @@ CONFIG += c++11
 
 SOURCES += \
         main.cpp \
-    server.cpp \
-    client.cpp
+    server.cpp
 
 HEADERS += \
-    server.h \
-    client.h
+    server.h
 
 FORMS += \
-        mainwindow.ui
+        widget.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
