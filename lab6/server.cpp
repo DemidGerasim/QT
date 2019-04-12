@@ -35,16 +35,16 @@ void Server::slotNewConnection(){
     connect(_clientSocket, SIGNAL(disconnected()), _clientSocket, SLOT(deleteLater()));
     connect(_clientSocket, SIGNAL(readyRead()), this, SLOT(slotReadClient()));
 
-    //sendToClient(_clientSocket, "Server response: connected.");
-    _clientSocket->write("Server response: connected.\n\r");
+    sendToClient(_clientSocket, "Server response: connected.");
+    //_clientSocket->write("Server response: connected.\n\r");
 }
 
 void Server::slotReadClient(){
-    //Вариант 1
+    /*Вариант 1
     while(_clientSocket->bytesAvailable()>0){
         QByteArray array = _clientSocket->readAll();
         _clientSocket->write(array);
-    }
+    }*/
 
 
     //Вариант 2
@@ -57,12 +57,12 @@ void Server::slotReadClient(){
     //_text->setText(buf);*/
 
     //Вариант 3
-    /*QDataStream in(_clientSocket);
+    QDataStream in(_clientSocket);
     //in.setVersion(QDataStream::Qt_5_10);
 
     while(true){
         if (_nextBlockSize == 0){
-            if (_clientSocket->bytesAvailable() <static_cast<int>(sizeof(quint16))){
+            if (_clientSocket->bytesAvailable() < static_cast<int>(sizeof(quint16))){
                 break;
             }
 
@@ -83,7 +83,7 @@ void Server::slotReadClient(){
         _nextBlockSize = 0;
 
         sendToClient(_clientSocket, "Server response: received \"" + str + "\".");
-    }*/
+    }
 }
 
 void Server::sendToClient(QTcpSocket* socket, const QString &str){

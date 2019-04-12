@@ -1,5 +1,5 @@
-#ifndef SEVER_H
-#define SEVER_H
+#ifndef SERVER_H
+#define SERVER_H
 
 #include <QWidget>
 
@@ -28,4 +28,4 @@ public slots:
     void slotReadClient();
 };
 
-#endif // SEVER_H
+#endif // SERVER_H

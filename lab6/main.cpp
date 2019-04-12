@@ -1,6 +1,6 @@
 #include <QApplication>
 #include "server.h"
-//#include "client.h"
+#include "client.h"
 
 int main(int argc, char *argv[])
 {
@@ -11,9 +11,11 @@ int main(int argc, char *argv[])
     Server server(8080);
     server.show();
 
-    //Client client1("localhost", 8080);
-    //client1.show();
+    Client client1("localhost", 8080);
+    client1.show();
 
+    //Client client2("localhost", 8080);
+    //client2.show();
 
     //############
 

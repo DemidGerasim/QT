@@ -1,14 +1,14 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2019-04-06T10:06:21
+# Project created by QtCreator 2019-04-06T13:25:47
 #
 #-------------------------------------------------
 
 QT       += core gui
-QT       += network
+
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = lab6
+TARGET = lab5
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -26,12 +26,10 @@ CONFIG += c++11
 
 SOURCES += \
         main.cpp \
-    server.cpp \
-    client.cpp
+        widget.cpp
 
 HEADERS += \
-    server.h \
-    client.h
+        widget.h
 
 FORMS += \
         widget.ui
