@@ -14,8 +14,8 @@ int main(int argc, char *argv[])
     Client client1("localhost", 8080);
     client1.show();
 
-    //Client client2("localhost", 8080);
-    //client2.show();
+//    Client client2("localhost", 8080);
+//    client2.show();
 
     //############
 
