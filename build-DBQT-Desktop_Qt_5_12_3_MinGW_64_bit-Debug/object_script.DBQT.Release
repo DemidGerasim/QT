@@ -1,0 +1,16 @@
+release/add.o
+release/main.o
+release/mainwindow.o
+release/adminwindow.o
+release/userwindow.o
+release/database.o
+release/checkin.o
+release/changedata.o
+release/changeprogress.o
+release/moc_add.o
+release/moc_mainwindow.o
+release/moc_adminwindow.o
+release/moc_userwindow.o
+release/moc_checkin.o
+release/moc_changedata.o
+release/moc_changeprogress.o

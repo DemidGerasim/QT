@@ -1,0 +1,20 @@
+{
+  "DataBase": [
+    {
+      "loginUser": "user",
+      "passwordUser": "user"
+    },
+    {
+      "loginModerator": "moder",
+      "passwordModerator": "moder"
+    },
+    {
+      "loginAdmin": "admin",
+      "passwordAdmin": "admin"
+    },
+    {
+      "loginUser": "Demid",
+      "passwordUser": "Gerasimenko"
+    }
+  ]
+}

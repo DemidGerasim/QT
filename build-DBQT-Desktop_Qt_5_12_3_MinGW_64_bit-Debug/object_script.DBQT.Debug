@@ -1,0 +1,16 @@
+debug/add.o
+debug/main.o
+debug/mainwindow.o
+debug/adminwindow.o
+debug/userwindow.o
+debug/database.o
+debug/checkin.o
+debug/changedata.o
+debug/changeprogress.o
+debug/moc_add.o
+debug/moc_mainwindow.o
+debug/moc_adminwindow.o
+debug/moc_userwindow.o
+debug/moc_checkin.o
+debug/moc_changedata.o
+debug/moc_changeprogress.o

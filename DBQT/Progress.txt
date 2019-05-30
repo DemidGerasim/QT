@@ -1,0 +1,3 @@
+1:Lev:Nikolayevich:Tolstoy:12:Name:Quantity:State
+2:Anton:Chekhov:Pavlovich:213:Name:Quantity:State
+3:Lev:Nikolayevich:Tolstoy:YEAR:Name:Quantity:State
