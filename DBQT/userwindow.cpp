@@ -37,9 +37,7 @@ void UserWindow::on_TableProgress_clicked()
     str = QString::fromStdString(test.searchProgressText("name", Info)); // имя
     str = QString::fromStdString(test.searchProgressText("surname", Info));// фамилия
     str = QString::fromStdString(test.searchProgressText("otch", Info));// отчество
-    str = QString::fromStdString(test.searchProgressText("kt1", Info));
-    str = QString::fromStdString(test.searchProgressText("kt2", Info));
-    str = QString::fromStdString(test.searchProgressText("kt3", Info));
+
 
     ui->ProgInfo->setText(str); // вывод найденных данных
 }

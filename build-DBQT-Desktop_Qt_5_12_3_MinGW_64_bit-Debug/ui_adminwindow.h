@@ -58,14 +58,15 @@ public:
     QPushButton *DeleteProg;
     QPushButton *Change;
     QPushButton *Change_2;
+    QPushButton *Change_3;
 
     void setupUi(QDialog *AdminWindow)
     {
         if (AdminWindow->objectName().isEmpty())
             AdminWindow->setObjectName(QString::fromUtf8("AdminWindow"));
-        AdminWindow->resize(800, 650);
+        AdminWindow->resize(812, 650);
         AdminWindow->setMinimumSize(QSize(800, 650));
-        AdminWindow->setMaximumSize(QSize(800, 700));
+        AdminWindow->setMaximumSize(QSize(820, 700));
         AdminWindow->setStyleSheet(QString::fromUtf8(""));
         groupBox_4 = new QGroupBox(AdminWindow);
         groupBox_4->setObjectName(QString::fromUtf8("groupBox_4"));
@@ -262,8 +263,13 @@ public:
 "color: rgb(255, 255, 255);"));
         Change_2 = new QPushButton(AdminWindow);
         Change_2->setObjectName(QString::fromUtf8("Change_2"));
-        Change_2->setGeometry(QRect(520, 10, 281, 25));
+        Change_2->setGeometry(QRect(520, 10, 181, 25));
         Change_2->setStyleSheet(QString::fromUtf8("background-color: rgb(99, 49, 0);\n"
+"color: rgb(255, 255, 255);"));
+        Change_3 = new QPushButton(AdminWindow);
+        Change_3->setObjectName(QString::fromUtf8("Change_3"));
+        Change_3->setGeometry(QRect(710, 10, 91, 25));
+        Change_3->setStyleSheet(QString::fromUtf8("background-color: rgb(99, 49, 0);\n"
 "color: rgb(255, 255, 255);"));
 
         retranslateUi(AdminWindow);
@@ -292,6 +298,7 @@ public:
         DeleteProg->setText(QApplication::translate("AdminWindow", "\320\243\320\264\320\260\320\273\320\270\321\202\321\214", nullptr));
         Change->setText(QApplication::translate("AdminWindow", "\320\241\320\274\320\265\320\275\320\260 \320\264\320\260\320\275\320\275\321\213\321\205", nullptr));
         Change_2->setText(QApplication::translate("AdminWindow", "\320\230\320\267\320\274\320\265\320\275\320\265\320\275\320\270\320\265 \320\264\320\260\320\275\320\275\321\213\321\205 \320\276 \320\272\320\275\320\270\320\263\320\260\321\205", nullptr));
+        Change_3->setText(QApplication::translate("AdminWindow", "\320\224\320\276\320\261\320\260\320\262\320\270\321\202\321\214 \320\272\320\275\320\270\320\263\321\203", nullptr));
     } // retranslateUi
 
 };

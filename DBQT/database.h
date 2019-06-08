@@ -109,13 +109,13 @@ public:
             bool download(); // загрузка БД из файла
             bool upload(); // загрузка БД в файл
 
-     //************************************ замена данных по определённому ID ************************************
+     //замена данных по определённому ID
     void changeKT1(int id, Prog temp_data);
     void changeKT2(int id, Prog temp_data);
     void changeKT3(int id, Prog temp_data);
     void changeKT4(int id, Prog temp_data);
     void changeKT5(int id, Prog temp_data);
-     //***********************************************************************************************************
+
 
     string data2string(Prog temp);
 

@@ -33,7 +33,8 @@ SOURCES += \
     database.cpp \
     checkin.cpp \
     changedata.cpp \
-    changeprogress.cpp
+    changeprogress.cpp \
+    addbook.cpp
 
 HEADERS += \
     add.h \
@@ -43,7 +44,8 @@ HEADERS += \
     userwindow.h \
     checkin.h \
     changedata.h \
-    changeprogress.h
+    changeprogress.h \
+    addbook.h
 
 FORMS += \
     add.ui \
@@ -52,7 +54,8 @@ FORMS += \
     userwindow.ui \
     checkin.ui \
     changedata.ui \
-    changeprogress.ui
+    changeprogress.ui \
+    addbook.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

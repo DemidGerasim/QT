@@ -25,7 +25,7 @@ void DataBase::fileToVector() // парсинг структуры файла
 
             int id = 1;
 
-            while(getline(streamS, token, ':')){ // проходит по файлу столько раз сколько строк в файлеж; все элементы структуры разделены :
+            while(getline(streamS, token, ':')){ // проходит по файлу столько раз сколько строк в файле; все элементы структуры разделены :
                 cout << token << endl; //токен
                 if(k == 0) item.id = stoi(token);
                 if(k == 1) item.tel = token;
@@ -45,11 +45,6 @@ void DataBase::fileToVector() // парсинг структуры файла
             cout << endl;
 
             _db.push_back(item); // запись текущей структуры в вектор _db
-
-
-
-
-
     }
 }
 
@@ -86,7 +81,6 @@ void DataBase::fileToVector() // парсинг структуры файла
             closeFile();
             return true;
         }
-
     bool DataBase::skip(){
             streamF.open("D:\\Study\\ProgrammingLanguages\\QT_181_352_Gerasimenko\\GUI\\DBQT\\" + _tableName +".txt", ios::out | ios::trunc);
             upload();
@@ -468,9 +462,6 @@ void DataBase::fileToVector() // парсинг структуры файла
 
     void DataBase::push_back(Data item){
         _db.push_back(item);
-
-
-
     }
 
     string DataBase::searchText(string k, string v)
@@ -486,7 +477,6 @@ void DataBase::fileToVector() // парсинг структуры файла
 
             if(k == "tel" && item.tel == v){
                 _db.push_back(item);//  добавление данных
-
                 // cтруктурирование данных которые будут выводиться в приложениии
                result = result + "ID: " + ID + ", Phone: " + item.tel + ", Name: " + item.name + ", Year: " +
                        item.surname + ", Address: " + item.otch + ", Login: " + item.login + ", Password:" + item.password + ", Status: " + item.status + ";\n";
@@ -660,7 +650,7 @@ void DataBase::fileToVector() // парсинг структуры файла
     }
 
 
-//*********************************** в данном класе все тоже самое что и в предыдущем классе (DataBase) ********************************************88
+//в данном класе все тоже самое что и в предыдущем классе (DataBase)
 
     void Progress::fileToVector()
     {
@@ -735,7 +725,6 @@ void DataBase::fileToVector() // парсинг структуры файла
             closeFile();
             return true;
         }
-
 
 
     bool Progress::write() //запись всей БД в файл
@@ -1067,30 +1056,6 @@ void DataBase::fileToVector() // парсинг структуры файла
                     if(k == "otch" && item.otch == result){
                         _db.push_back(item);
                     }
-
-
-
-
-                    if(k == "kt1" && item.kt1 == result){
-                       select.push_back(item);
-                    }
-
-                    if(k == "kt2" && item.kt2 == result){
-                       select.push_back(item);
-                    }
-
-                    if(k == "kt3" && item.kt3 == result){
-                        _db.push_back(item);
-                    }
-
-                    if(k == "kt4" && item.kt4 == result){
-                       select.push_back(item);
-                    }
-
-
-
-
-
 
                 }
 

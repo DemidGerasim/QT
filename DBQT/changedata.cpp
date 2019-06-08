@@ -2,6 +2,7 @@
 #include "ui_changedata.h"
 #include "database.h"
 #include <QMessageBox>
+#include <QRegularExpression>
 
 
 ChangeData::ChangeData(QWidget *parent) :
@@ -38,8 +39,17 @@ void ChangeData::on_pushButton_7_clicked()
         DataBase obj("Reg");
 
         // проверка что изменять
+        QRegularExpression PHONE("^([\\+][7]){1}+([0-9]){1}+[0-9]{9}$");
 
+
+        if(tel.contains(PHONE) == false){
+            QMessageBox::warning(this, "Ошибка", "Заполните все поля и исправте ошибки!!!");
+        }
+        else if(tel.contains(PHONE) == true )
+        {
+            ui->phone->clear();
             obj.changeTel(id, ch);
+        }
 
 
     }
@@ -65,7 +75,15 @@ void ChangeData::on_name_2_clicked()
         Data ch;
         ch.name = Name;
         DataBase obj("Reg");
+         QRegularExpression NAME("^([A-Z]){1}+[a-z]*[a-z]$");
+        if(name.contains(NAME)== false){
+            QMessageBox::warning(this, "Ошибка", "Заполните все поля и исправте ошибки!!!");
+        }
+        else if(name.contains(NAME) == true )
+        {
+            ui->name->clear();
           obj.changeName(id, ch);
+        }
     }
     else
     {
@@ -84,10 +102,18 @@ void ChangeData::on_surname_2_clicked()
     {
     Data ch;
     ch.surname = Surname;
+    QRegularExpression NAME("^([A-Z]){1}+[a-z]*[a-z]$");
 
-     DataBase obj("Reg");
+           if(surname.contains(NAME) == false){
+               QMessageBox::warning(this, "Ошибка", "Заполните все поля и исправте ошибки!!!");
+           }
+           else if(surname.contains(NAME) == true )
+           {
+             DataBase obj("Reg");
+            ui->surname->clear();
 
-    obj.changeSurname(id, ch);
+            obj.changeSurname(id, ch);
+           }
     }
     else
     {
@@ -107,9 +133,17 @@ void ChangeData::on_pushButton_12_clicked()
 
         Data ch;
          ch.otch = Otch;
+         QRegularExpression NAME("^([A-Z]){1}+[a-z]*[a-z]$");
 
+         if(otch.contains(NAME) == false){
+             QMessageBox::warning(this, "Ошибка", "Заполните все поля и исправте ошибки!!!");
+         }
+         else if(otch.contains(NAME) == true )
+         {
           DataBase obj("Reg");
-        obj.changeOtch(id, ch);
+            obj.changeOtch(id, ch);
+            ui->otch->clear();
+         }
     }
     else
     {
@@ -128,8 +162,17 @@ void ChangeData::on_login_2_clicked()
 
          Data ch;
         ch.login = Login;
-          DataBase obj("Reg");
+
+        if(login != ""){
+            QMessageBox::warning(this, "Ошибка", "Заполните все поля и исправте ошибки!!!");
+        }
+        else if(login != "")
+        {
+            ui->login->clear();
+            DataBase obj("Reg");
+
            obj.changeLogin(id, ch);
+        }
     }
     else
     {
@@ -147,12 +190,19 @@ void ChangeData::on_password_2_clicked()
         QString password = ui->password->text();
         string Pass = password.toStdString();
 
-        Data ch;
+         Data ch;
          ch.password = Pass;
 
-         DataBase obj("Reg");
+         if(password != ""){
+             QMessageBox::warning(this, "Ошибка", "Заполните все поля и исправте ошибки!!!");
+         }
+         else if(password != "")
+         {
+                ui->password->clear();
+                DataBase obj("Reg");
 
               obj.changePass(id, ch);
+         }
 
     }
     else

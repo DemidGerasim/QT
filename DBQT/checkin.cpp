@@ -2,6 +2,7 @@
 #include "ui_checkin.h"
 #include "database.h"
 #include <QMessageBox>
+#include <QRegularExpression>
 
 CheckIn::CheckIn(QWidget *parent) :
     QDialog(parent),
@@ -33,13 +34,17 @@ void CheckIn::on_pushButton_7_clicked() // добаляем пользовате
         QString password = ui->lineEdit_12->text();
         QString status = "user";
 
-        if(tel == "" || name == "" || surname == "" || otch == "" || login == "" || password == "")
+        QRegularExpression NAME("^([A-Z]){1}+[a-z]*[a-z]$");
+        QRegularExpression PHONE("^([\\+][7]){1}+([0-9]){1}+[0-9]{9}$");
+
+
+        if(tel.contains(PHONE) == false || name.contains(NAME) == false || surname.contains(NAME) == false || otch.contains(NAME) == false || login == "" || password == "")
         {
-            QMessageBox::warning(this, "Ошибка", "Заполните все поля!!!");
+            QMessageBox::warning(this, "Ошибка", "Заполните все поля и исправте ошибки!!!");
         }
-        else
+        else if(tel.contains(PHONE) == true && name.contains(NAME) == true && surname.contains(NAME) == true && otch.contains(NAME) == true && login != "" && password != "")
         {
-              // cчитанные данные преобразуем в string
+                   // cчитанные данные преобразуем в string
             string Status = status.toStdString();
             string Tel = tel.toStdString();
             string Name = name.toStdString();
@@ -48,7 +53,14 @@ void CheckIn::on_pushButton_7_clicked() // добаляем пользовате
             string Login = login.toStdString();
             string Password = password.toStdString();
 
-            // сравнение с структурой
+            ui->lineEdit_7->clear();
+            ui->lineEdit_8->clear();
+            ui->lineEdit_9->clear();
+            ui->lineEdit_11->clear();
+            ui->lineEdit_13->clear();
+            ui->lineEdit_12->clear();
+
+                 // сравнение с структурой
             Data x;
             x.tel = Tel;
             x.name = Name;

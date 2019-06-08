@@ -6,6 +6,7 @@
 #include "add.h"
 #include "changedata.h"
 #include "changeprogress.h"
+#include "addbook.h"
 
 AdminWindow::AdminWindow(QWidget *parent) :
     QDialog(parent),
@@ -77,7 +78,7 @@ void AdminWindow::on_TableProgress_clicked()
     ui->ProgInfo->setText(str);
 }
 
-void AdminWindow::on_Delete_clicked() // удаление по ip
+void AdminWindow::on_Delete_clicked() // удаление по id
 {
     QString ID = ui->lineEdit_21->text();
     int id = ID.toInt();
@@ -85,7 +86,7 @@ void AdminWindow::on_Delete_clicked() // удаление по ip
     delID.del(id);
 }
 
-void AdminWindow::on_DeleteProg_clicked()// удаление по ip
+void AdminWindow::on_DeleteProg_clicked()// удаление по id
 {
     QString ID = ui->LineProgDelete->text();
     int id = ID.toInt();
@@ -104,6 +105,14 @@ void AdminWindow::on_Change_clicked() // показывает окно со см
 void AdminWindow::on_Change_2_clicked() // показывает окно со сменой данных
 {
     ChangeProgress wind;
+    wind.setModal(true);
+    wind.exec();
+    show();
+}
+
+void AdminWindow::on_Change_3_clicked()
+{
+    addBook wind;
     wind.setModal(true);
     wind.exec();
     show();

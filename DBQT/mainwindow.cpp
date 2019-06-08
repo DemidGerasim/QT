@@ -33,7 +33,7 @@ void MainWindow::on_pushButton_clicked()
     temp.login = Log;
     temp.password = Pass;
 
-    // проверка какое окно открывать ( в зависимости от статуса
+    // проверка какое окно открывать ( в зависимости от статуса )
    if(check.checkLogAndPassAdmin(Log, Pass) == true)
    {
         hide();

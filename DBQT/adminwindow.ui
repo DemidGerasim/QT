@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>812</width>
     <height>650</height>
    </rect>
   </property>
@@ -18,7 +18,7 @@
   </property>
   <property name="maximumSize">
    <size>
-    <width>800</width>
+    <width>820</width>
     <height>700</height>
    </size>
   </property>
@@ -426,7 +426,7 @@ color: rgb(255, 255, 255);</string>
     <rect>
      <x>520</x>
      <y>10</y>
-     <width>281</width>
+     <width>181</width>
      <height>25</height>
     </rect>
    </property>
@@ -436,6 +436,23 @@ color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>Изменение данных о книгах</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Change_3">
+   <property name="geometry">
+    <rect>
+     <x>710</x>
+     <y>10</y>
+     <width>91</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(99, 49, 0);
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Добавить книгу</string>
    </property>
   </widget>
  </widget>

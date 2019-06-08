@@ -36,6 +36,8 @@ private slots:
 
    void on_Change_2_clicked();
 
+   void on_Change_3_clicked();
+
 private:
     Ui::AdminWindow *ui;
 
